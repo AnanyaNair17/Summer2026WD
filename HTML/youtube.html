@@ -5,15 +5,40 @@
         <style>
             .thumbnail{
                 width: 300px;
+                display: block;
             }
 
             .search-bar{
                 
             }
+
+            .video-title{
+                width: 300px;
+            }
+
+            
         </style>
     </head>
     <body>
         <img class="thumbnail" src="thumbnails/thumbnail-1.webp">
         <input class="search-bar" type="text" placeholder="Search">
+        <p class="video-title">
+            Talking Tech and AI with Google CEO Sundar Pichai!
+        </p>
+        <p class="video-author">
+            Marques Brownlee
+        </p>
+        <p class="video-stats">
+            3.4M views &#183; 6 months ago
+        </p>
     </body>
 </html> 
+<!--
+1.block element - take up the entire line regardless of the space they need
+2. inline block element - only takes up as much as space as needed 
+3. inline elemnt - appear within a block of text (like text inside <strong> tag)
+    .video-author,
+    .video-stats{
+         display: inline-block;
+    }
+-->
