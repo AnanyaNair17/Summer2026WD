@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid Practice</title>
+    </head>
+    <body style="padding-bottom: 1000px;">
+        <div style="
+            display: grid;
+            grid-template-columns: 100px 100px;
+            ">
+            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightpink;">div 2<p>text</p></div>
+        </div>
+        <div style="
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 100px 100px 200px;
+            ">
+            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightpink;">div 2<p>text</p></div>
+            <div style="background-color: lightblue;">div 3</div>
+            <div style="background-color: lightpink;">div 4</div>
+        </div>
+
+        <div style="
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            ">
+            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightpink;">div 2</div>
+        </div>
+
+        <div style="
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 100px 1fr 1fr 2fr;
+            ">
+            <div style="background-color: lightblue;">div 1</div>
+            <div style="background-color: lightpink;">div 2</div>
+            <div style="background-color: lightblue;">div 3</div>
+            <div style="background-color: lightpink;">div 4</div>
+        </div>
+
+        <div style="
+            margin-top: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: 20px;
+            row-gap: 40px;
+            ">
+            <div style="background-color: lightblue; height: 200px;">div 1</div>
+            <div style="background-color: lightpink; height: 200px;">div 2</div>
+            <div style="background-color: lightblue; height: 200px;">div 3</div>
+            <div style="background-color: lightpink; height: 200px;">div 4</div>
+            <div style="background-color: lightblue; height: 200px;">div 5</div>
+            <div style="background-color: lightpink; height: 200px;">div 6</div>
+        </div>
+    </body>
+</html>
+<!--
+1. fr - stands for free space
+-->
