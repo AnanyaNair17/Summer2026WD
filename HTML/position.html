@@ -13,7 +13,8 @@
             top: 0;
             left: 0;
             right: 0;
-            height: 50px">
+            height: 50px;
+            z-index: 1;">
             header
         </div>
         <div style="background-color: green;
@@ -25,7 +26,23 @@
             width: 72px;
             ">
             sidebar
+            <div style="position: absolute;
+        background-color: red;
+        color: white;
+        top: 0px;
+        right: 0px;">
+            X
         </div>
+        </div>
+
+        <div style="position: absolute;
+        background-color: red;
+        color: white;
+        top: 60px;
+        right: 10px;">
+            absolute
+        </div>
+        
         <div style="
             background-color: lightblue;
             height: 200px;
@@ -37,8 +54,20 @@
             background-color: lightpink;
             height: 200px;
             width: 200px;
-            position: static;">
+            position: relative;">
             div2
+            <div style="position: absolute;
+        background-color: black;
+        color: white;
+        bottom : 10px;
+        right: 10px;">
+            5:00
+        </div>
         </div>
     </body>
 </html>
+<!--
+1. absolute is placed on the page(moves with the page)
+2. fixed is placed on the browser window
+3. div written below appears in the front unless overwritten by z-index
+-->
