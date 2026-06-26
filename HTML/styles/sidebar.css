@@ -5,4 +5,36 @@
     top: 55px;
     background-color: white;
     width: 72px;
+    z-index: 200;
+    padding-top: 5px;
+    cursor: pointer;
 }
+
+.sidebar-link{
+    height: 74px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.sidebar-link:hover{
+    background-color: rgb(225,225, 225 );
+}
+
+.sidebar-link img{
+    height: 24px;
+}
+
+.sidebar-link div{
+    font-family: Roboto, Arial;
+    font-size: 10px;
+    margin-top: 6px;
+}
+
+/* 
+1.there are different types of selectors in css 
+2.align-items is for vertical alignment
+3.justify-content is for horizontal alignment
+4. 2 & 3 are switched when flex-direction is changed to column(default is row)
+*/
