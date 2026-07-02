@@ -7,7 +7,27 @@
   <body>
     
     <script>
+     function fn1(){
+      console.log('hello');
+      console.log(2+2);
+     }
      
+     fn1();
+     fn1();
+
+     function calculation(cost, taxp){
+      console.log(cost*taxp);
+     }
+
+     calculation(2000, 0.2);
+     calculation(35);
+
+     function calc(cost, taxp=0.1){
+      console.log(cost*taxp);
+     }
+
+     calc(2000, 0.2);
+     calc(35);
     </script>
   </body>
 </html>
