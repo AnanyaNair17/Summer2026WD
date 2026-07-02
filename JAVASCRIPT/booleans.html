@@ -9,8 +9,52 @@
     <script>
       console.log(typeof 'true');
       console.log(typeof true);
+
       console.log(3<5);
       console.log(3>5);
+
+      console.log(3 == '3.0');
+      console.log(3 === '3.0');
+
+      //truthy and falsy values example
+
+    let cq = 5;
+    if(cq){
+      console.log('cart has products');
+    }
+    cq = 0;
+    if(cq){
+      console.log('cart has products');
+    }
+
+    console.log(!0);
+
+    console.log('text'/5);
+    let var1;
+    console.log(var1);
+    const var2 = undefined;
+    console.log(var2);
+    console.log(typeof var1);
+    console.log(typeof var2);
+
+    const result = 0 ? 'truthy' : 'falsy';
+    console.log(result);
+
+    //guard operator && prevents the running of code on its right. We can do this with || operator
+    false && console.log('hello');
+    const msg = false && console.log('hello');
+    console.log(msg);
+
+    const mesg = 5 && 'hello'; //displays hello bcz 5 is a truthy value 
+    console.log(mesg);
+
+    //suppose on a website you need to choose a currency and if kt chosen the default currency will be usd. It can be shown as such
+
+    const curr = 'EUR' || USD;
+    console.log(curr);
+    const currency = undefined || 'USD';
+    console.log(currency);
+
     </script>
   </body>
 </html>
