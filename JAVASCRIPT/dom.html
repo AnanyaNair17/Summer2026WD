@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+    
+  </head>
+  <body>
+    <button>
+      Hello
+    </button>
+
+    <button class="js-button">
+      Second
+    </button>
+    
+    <script>
+      console.log(document.querySelector('button').innerHTML); //gets the first button element from the page
+      document.querySelector('button').innerHTML = 'Changed';
+      const buttonElement = document.querySelector('.js-button');
+      console.log(buttonElement);
+      
+
+      /*console.log(document.title);
+      document.title = 'Changed';
+
+      console.log(document.body); 
+      console.log(typeof document.body);//html element inside js is converted to an object
+      console.log(document.body.innerHTML); //typeof is string
+
+      document.body.innerHTML = '<button>Good Job!</button>';*/
+
+      /*document.body.innerHTML = 'hello'; //here document is an object body is an object
+      document.title = 'Good Job!'*/
+    </script>
+  </body>
+</html>
+
+

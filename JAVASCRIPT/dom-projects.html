@@ -1,0 +1,61 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <body>
+    <p>Youtube Subscribe Button</p>
+    <button onclick="
+      subscribe();
+    " class="js-subscribe-button">Subscribe</button>
+
+    <p>Amazon Shipping Calculator</p>
+    <input placeholder="Cost of order" class="js-cost-input" onkeydown="
+      handleKeyDown(event);
+    ">
+    <button onclick = "
+      calculate();
+    ">Calculate</button>
+    <p class="js-total-cost"></p>
+    <script>  
+      //document object represents the web page but the window object represents the browser
+      String(25);//converts 25 into a string
+      console.log('25'-5); //gives 20 answer even tho 25 is a string. wint work for + operator
+
+      window.document
+      window.console.log('Window');
+      window.alert //we dont add window becz js adds it for us automatically
+
+      function handleKeyDown(event){
+         if(event.key === 'Enter'){
+          calculate();
+        }
+      }
+
+      function calculate(){
+        const inputElement = document.querySelector('.js-cost-input');
+        let cost = Number(inputElement.value);
+
+        if(cost<40){
+          cost = cost + 10;
+        }
+
+        document.querySelector('.js-total-cost')
+          .innerHTML = `$${cost}`;
+      }
+      function subscribe(){
+        const buttonElement = document.querySelector('.js-subscribe-button');
+        if(buttonElement.innerText === 'Subscribe'){ //used Text instead of HTML here so that it ignores all the extra spaces if present.
+          buttonElement.innerHTML = 'Subscribed';
+        }
+        else{
+          buttonElement.innerHTML = 'Subscribe';
+        }
+      }
+      /*clicks, keydowns -> events
+      onclicks, onkeydowns -> event listeners
+      every event listener gets an event object*/
+    </script>
+  </body>
+</html>
+
