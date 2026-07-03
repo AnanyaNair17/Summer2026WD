@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Objects</title>
+    
+  </head>
+  <body>
+    
+    <script>
+     const product = {
+      name: 'socks',
+      price: 1090
+     };
+
+     console.log(product);
+     console.log(product.name);
+     console.log(product.price);
+
+     product.name = 'cotton socks';
+     console.log(product);
+
+     product.newProperty = true; //new property added
+     console.log(product);
+
+     delete product.newProperty;
+     console.log(product);
+
+     const product2 = {
+        name: 'shirt',
+        ['delivery-time']: 'one day',
+        rating: {
+          stars: 4.5,
+          count: 87
+        },
+        fun: function func(){
+          console.log('function inside object');
+        }
+      };
+      console.log(product2.name);
+      console.log(product2['name']); //bracket notation
+      //console.log(product2.delivery-status) -> this gives an error bcz js thinks that it is a minus sign
+      console.log(product2['delivery-status']);
+      console.log(product2.rating.count);
+      product2.fun();
+
+      console.log(typeof console); // returns object which means console is an object
+      console.log(typeof console.log); //returns function
+
+      /* objects + functions are called methods 
+      example: Math.random() here Math is an object and random is a function 
+      Math, console, JSON, localStorage are all built in objects
+      */
+
+    /*
+      JSON doesnt support single quotes we must use double quotes,
+      JSON doesnt support functions
+      JSON syntax is understood by many programming languages
+      JSON is used to send data between computers
+    */
+
+    console.log(JSON.stringify(product2));
+    console.log(typeof JSON.stringify(product2));
+
+    const jsonString = JSON.stringify(product2);
+    console.log(JSON.parse(jsonString)); 
+
+    //localStorage helps in retaining values even after refreshing 
+    //localStorage only allows string input
+
+    //JS does autoboxing -> gives string properties and methods like objects
+    console.log('hello'.length);
+    console.log('hello'.toUpperCase());
+
+    //objects  are references
+    const obj1 ={
+      msg: 'hello'
+    };
+    const obj2 = obj1; //copy by reference
+
+    obj1.msg = 'Good Job!';
+    console.log(obj1);
+    console.log(obj2);
+
+    //we cant compare objects directly
+    const obj3 = {
+      msg: 'Good Job!'
+    };
+
+    console.log(obj1===obj3);
+    console.log(obj1==obj3); //both are false
+    console.log(obj1===obj2); //this will give value true
+
+    const obj4 = {
+      msg: 'Good Job!',
+      price: 799
+    };
+
+    //const msg = obj4.msg;
+    const {msg, price} = obj4; //object short cut
+    console.log(msg, price);
+
+    const obj5 = {
+      //msg: msg
+      msg,
+      //method: function funn(){
+        //console.log('method');
+      //}
+      method(){
+        console.log('method');
+      }
+    };
+    obj5.method();
+    console.log(obj5);
+    </script>
+  </body>
+</html>
+
+
