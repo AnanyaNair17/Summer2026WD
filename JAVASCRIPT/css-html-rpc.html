@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles/rpc.css">
+  </head>
+  <body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="
+      playGame('Rock');
+    " class="move-button"><img src="rpc-emoji/rock-emoji.png" class="play-button"></button>
+    
+    <button onclick="
+      playGame('Paper');
+    " class="move-button"><img src="rpc-emoji/paper-emoji.png" class="play-button"></button>
+
+    <button onclick="
+      playGame('Scissors');
+    " class="move-button"><img src="rpc-emoji/scissors-emoji.png" class="play-button"></button> 
+
+    <p class="js-result result"></p>
+    <p class="js-moves">
+      
+    </p>
+    <p class="js-score score"></p>
+
+    <button onclick="
+      score.wins = 0;
+      score.losses = 0;
+      score.ties = 0;
+      updateScoreElement();
+    " class="reset-score-button">Reset score</button>
+    <script src="scripts/rpc.js"></script>
+  </body>
+</html>
+
+
