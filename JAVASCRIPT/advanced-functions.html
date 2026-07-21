@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html>
+  <head>
+    <title>Advanced Functions</title>
+    <style>
+      
+    </style>
+  </head>
+  <body>
+    
+    <script>  
+      function greeting(){
+        console.log('greeting');
+      }
+      greeting();
+
+      const num = 2;
+
+      const fun1 = function(){
+        console.log('greeting');
+      };
+
+      console.log(fun1);
+      console.log(typeof fun1);
+      fun1();
+      //hoisting doesnt work if we use the variable syntax for functions
+
+      const obj = {
+        num: 2,
+        fun: function(){
+          console.log('hello');
+        }
+      };
+      obj.fun();
+
+      function run(param){
+        param();
+      }
+      run(function(){
+        console.log('hello');
+      });
+
+      setTimeout(function(){
+        console.log('timeout');
+      }, 3000);
+
+      console.log('next line');
+
+      setInterval(function(){
+        console.log('interval');
+      }, 3000);
+
+      console.log('next line 2');
+
+      [
+        'cook food',
+        'wash dishes',
+        'go to sleep'
+      ].forEach(function(value, index){
+          // for continue in forEach try this
+          if(value==='wash dishes'){
+            return;
+          }
+          console.log(index);
+          console.log(value);
+      });
+    </script>
+  </body>
+</html>
+
